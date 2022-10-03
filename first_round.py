@@ -8,5 +8,5 @@ data = requests.get(url)
 json_data = json.loads(data.content)
 
 df_ballot = pd.DataFrame(json_data['cand'])[['nm', 'vap', 'pvap']] 
-df_ballot.columns = ['Candidato','Votos','Pct']
+df_ballot.columns = ['Candidato','Votos','%']
 df_ballot
